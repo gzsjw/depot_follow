@@ -1,12 +1,24 @@
 DepotFollow::Application.routes.draw do
-  resources :line_items
+  get "admin" => "admin#index"
+  controller :sessions do
+    get "login" => :new
+    post "login" => :create
+    delete "logout" => :destroy
+  end
 
-  resources :carts
+  resources :users
 
   get "store/index"
-  resources :products
+  resources :products do
+    get :who_bought, on: :member
+  end
 
-  root 'store#index', as: 'store'
+  scope '(:locale)' do
+    resources :orders
+    resources :line_items
+    resources :carts
+    root 'store#index', as: 'store', via: :all
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
