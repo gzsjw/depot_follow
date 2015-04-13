@@ -44,3 +44,6 @@ Product.create!(title: 'Rails Test Prescriptions',
   image_url: 'rtp.jpg',
   price: 34.95)
 
+User.delete_all
+User.create(name: 's1', password: '1', password_confirmation: '1')
+
