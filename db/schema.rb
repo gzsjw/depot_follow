@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150409173425) do
+ActiveRecord::Schema.define(version: 20150422234448) do
 
   create_table "carts", force: true do |t|
     t.datetime "created_at"
@@ -36,6 +36,15 @@ ActiveRecord::Schema.define(version: 20150409173425) do
     t.text     "address"
     t.string   "email"
     t.string   "pay_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pictures", force: true do |t|
+    t.string   "comment"
+    t.string   "name"
+    t.string   "content_type"
+    t.binary   "data",         limit: 16777215
     t.datetime "created_at"
     t.datetime "updated_at"
   end

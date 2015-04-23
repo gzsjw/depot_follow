@@ -20,6 +20,13 @@ DepotFollow::Application.routes.draw do
     root 'store#index', as: 'store', via: :all
   end
 
+  controller :upload do
+    get "upload/get" => :get
+    post "upload/save" => :save
+    get "upload/show" => :show
+    get "upload/picture" => :picture
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
