@@ -1,13 +1,13 @@
 require 'bundler/capistrano'
 
 # be sure to change these
-set :user, 'ubuntu'
-set :domain, '52.74.183.56'
-set :application, 'depot'
+set :user, 'sjw'
+set :domain, '172.20.10.4'
+set :application, 'depot_follow'
 
 # adjust if you are using RVM, remove if you are not
 set :rvm_type, :user
-set :rvm_ruby_string, 'ruby-2.0.0-p643'
+set :rvm_ruby_string, 'ruby-2.0.0-p598'
 require 'rvm/capistrano'
 
 # file paths
