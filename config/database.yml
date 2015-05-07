@@ -9,9 +9,9 @@ development:
   reconnect: false
   database: depot2_dev
   pool: 5
-  username: gdsjw
-  password: jw121818
-  host: mysqlinst.ch7hjjux5ibn.ap-southeast-1.rds.amazonaws.com
+  username: sjw
+  password: jw1218
+  host: localhost
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -22,9 +22,9 @@ test:
   reconnect: false
   database: depot2_tst
   pool: 5
-  username: gdsjw
-  password: jw121818
-  host: mysqlinst.ch7hjjux5ibn.ap-southeast-1.rds.amazonaws.com
+  username: sjw
+  password: jw1218
+  host: localhost
 
 production:
   adapter: mysql2

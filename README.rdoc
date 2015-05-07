@@ -6,18 +6,45 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+development:ruby-2.0.0-p598
+
+deploy/production:ruby-2.0.0-p643
 
 * System dependencies
 
 * Configuration
+development:
+apache2+passenger+mysql2
+VirtualHost *:80
+DocumentRoot /srv/RailsProject/depot_follow/public
+RailsEnv development
+
+deploy/product:
+apache2+passenger+mysql2
+web server:52.74.183.56(aws ec2)
+ssh:ssh ubuntu@52.74.183.56
+mysql server:mysqlinst.ch7hjjux5ibn.ap-southeast-1.rds.amazonaws.com(aws RDS)
+VirtualHost *:8080
+DocumentRoot /home/ubuntu/deploy/depot/current/public
+RailsEnv production
 
 * Database creation
+development host:
+create database depot2_dev DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+create database depot2_tst DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+deploy/product host:
+create database depot2_prd DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 * Database initialization
+rake db:setup
 
 * How to run the test suite
+rake test
 
 * Services (job queues, cache servers, search engines, etc.)
+sudo service mysql start
+sudo service apache2 restart
 
 * Deployment instructions
 
