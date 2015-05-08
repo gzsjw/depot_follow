@@ -21,8 +21,8 @@ RailsEnv development
 
 deploy/product:
 apache2+passenger+mysql2
-web server:52.74.183.56(aws ec2)
-mysql server:mysqlinst.ch7hjjux5ibn.ap-southeast-1.rds.amazonaws.com(aws RDS)
+web server:52.74.190.218(aws ec2)
+mysql server:gzsjw-rds.ch7hjjux5ibn.ap-southeast-1.rds.amazonaws.com(aws RDS)
 VirtualHost *:8080
 DocumentRoot /home/ubuntu/deploy/depot/current/public
 RailsEnv production
@@ -52,7 +52,7 @@ git commit -m "deploy to aws"
 git push  github_gzsjw master
 
 deploy host:
-ssh ubuntu@52.74.183.56
+ssh ubuntu@52.74.190.218
 cd /srv/RailsProject/depot_deploy/
 git pull github_gzsjw master
 
@@ -61,7 +61,7 @@ cap deploy:check
 cap deploy:seed
 sudo service apache2 restart
 
-http://ec2-52-74-183-56.ap-southeast-1.compute.amazonaws.com:8080/
+http://ec2-52-74-190-218.ap-southeast-1.compute.amazonaws.com:8080/
 
 * ...
 

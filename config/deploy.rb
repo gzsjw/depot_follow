@@ -2,7 +2,7 @@ require 'bundler/capistrano'
 
 # be sure to change these
 set :user, 'ubuntu'
-set :domain, '52.74.183.56'
+set :domain, '52.74.190.218'
 set :application, 'depot'
 
 # adjust if you are using RVM, remove if you are not
