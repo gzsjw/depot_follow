@@ -4,6 +4,7 @@ require 'bundler/capistrano'
 set :user, 'ubuntu'
 set :domain, '52.74.190.218'
 set :application, 'depot'
+set :ssh_options[:port] = 228
 
 # adjust if you are using RVM, remove if you are not
 set :rvm_type, :user
