@@ -17,6 +17,6 @@
 
 README.rdoc
 Capfile
-/config/deploy*.rb
-/config/database*.yml
+/config/deploy*
+/config/database*
 
